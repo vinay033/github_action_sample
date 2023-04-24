@@ -26,7 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: |
+    - name: Install Dependencies
+      run: |
           if [ -e package-lock.json ]; then
             npm ci --force
           else
