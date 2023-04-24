@@ -33,4 +33,5 @@ jobs:
             npm i --force
           fi
     - run: npm run build --if-present
+    - run: npm e2e
     - run: npm test
