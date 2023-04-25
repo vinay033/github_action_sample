@@ -30,3 +30,7 @@ jobs:
       - run: npm run build
       - run: npm run test -- --watch=false --browsers=ChromeHeadless
       - run: npm run e2e
+        
+      - name: Cypress run
+        working-directory: ./integration_test/NetProbe_E2E/cypress
+        run: npx cypress run --env grepTags="@trap @probe"
