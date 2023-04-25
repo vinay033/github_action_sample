@@ -29,9 +29,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run test -- --watch=false --browsers=ChromeHeadless
-      - run: ng e2e
-
-
+      - run: npm run e2e -- --watch=false --browsers=ChromeHeadless
 
         
    
